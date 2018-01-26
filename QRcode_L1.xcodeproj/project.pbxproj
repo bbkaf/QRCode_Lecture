@@ -49,6 +49,7 @@
 		DACAB140201A04410089E326 /* QRcode_L1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRcode_L1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACAB144201A04410089E326 /* QRcode_L1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcode_L1UITests.swift; sourceTree = "<group>"; };
 		DACAB146201A04410089E326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACAB152201A07640089E326 /* QRcode_L1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QRcode_L1.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 				DACAB138201A04410089E326 /* QRcode_L1Tests */,
 				DACAB143201A04410089E326 /* QRcode_L1UITests */,
 				DACAB11F201A04400089E326 /* Products */,
+				DACAB153201A07640089E326 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +101,7 @@
 		DACAB120201A04400089E326 /* QRcode_L1 */ = {
 			isa = PBXGroup;
 			children = (
+				DACAB152201A07640089E326 /* QRcode_L1.entitlements */,
 				DACAB121201A04400089E326 /* AppDelegate.swift */,
 				DACAB123201A04400089E326 /* ViewController.swift */,
 				DACAB125201A04400089E326 /* Main.storyboard */,
@@ -126,6 +129,13 @@
 				DACAB146201A04410089E326 /* Info.plist */,
 			);
 			path = QRcode_L1UITests;
+			sourceTree = "<group>";
+		};
+		DACAB153201A07640089E326 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +207,11 @@
 					DACAB11D201A04400089E326 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 					DACAB134201A04410089E326 = {
 						CreatedOnToolsVersion = 9.2;
@@ -433,6 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KU48Y2UB6V;
 				INFOPLIST_FILE = QRcode_L1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fareastone.vms.employee.QRcode-L1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,6 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KU48Y2UB6V;
 				INFOPLIST_FILE = QRcode_L1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fareastone.vms.employee.QRcode-L1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
