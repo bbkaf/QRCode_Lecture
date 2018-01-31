@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1910F0202208C100D05231 /* IdentifierCardMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1910EF202208C100D05231 /* IdentifierCardMaker.swift */; };
+		DA1910F22022093400D05231 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1910F12022093400D05231 /* Employee.swift */; };
 		DACAB122201A04400089E326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACAB121201A04400089E326 /* AppDelegate.swift */; };
 		DACAB124201A04400089E326 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACAB123201A04400089E326 /* ViewController.swift */; };
 		DACAB127201A04400089E326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACAB125201A04400089E326 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1910EF202208C100D05231 /* IdentifierCardMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierCardMaker.swift; sourceTree = "<group>"; };
+		DA1910F12022093400D05231 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		DACAB11E201A04400089E326 /* QRcode_L1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRcode_L1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACAB121201A04400089E326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACAB123201A04400089E326 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				DACAB121201A04400089E326 /* AppDelegate.swift */,
 				DACAB123201A04400089E326 /* ViewController.swift */,
 				DACAB125201A04400089E326 /* Main.storyboard */,
+				DA1910EF202208C100D05231 /* IdentifierCardMaker.swift */,
+				DA1910F12022093400D05231 /* Employee.swift */,
 				DACAB12B201A04400089E326 /* Assets.xcassets */,
 				DACAB12D201A04400089E326 /* LaunchScreen.storyboard */,
 				DACAB130201A04400089E326 /* Info.plist */,
@@ -278,7 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DACAB12A201A04400089E326 /* QRcode_L1.xcdatamodeld in Sources */,
+				DA1910F0202208C100D05231 /* IdentifierCardMaker.swift in Sources */,
 				DACAB124201A04400089E326 /* ViewController.swift in Sources */,
+				DA1910F22022093400D05231 /* Employee.swift in Sources */,
 				DACAB122201A04400089E326 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
