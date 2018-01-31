@@ -51,6 +51,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
+    @IBAction func addEmployeeData(_ sender: UIButton) {
+        employeeData.append(["name": name,
+                             "phone": phone,
+                             "gender": gender,
+                             "dep": dep])
+        print(employeeData)
+    }
     
  
     //MARK: - UITableViewDataSource delegate methode
