@@ -26,7 +26,7 @@ class IdentifierCardMaker {
         //for i in 0..<employeeDataDic.count {
         //for i in employeeDataDic.indices {
         for employeeData in employeeDataDic {
-            let employee = Employee(name: employeeData["name"]!, phone: employeeData["phone"]!, gender: employeeData["gender"]!, dep: employeeData["dep"]!)  //try free initializer in of struct
+            let employee = Employee(name: employeeData["name"] ?? "", phone: employeeData["phone"] ?? "", gender: employeeData["gender"]!, dep: employeeData["dep"]!)  //try free initializer in of struct try ??
             employees.append(employee)
         }
     }
