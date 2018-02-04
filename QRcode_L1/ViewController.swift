@@ -32,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         myTableView.delegate = self
         myTableView.dataSource = self
+        
     }
 
     override func viewWillLayoutSubviews() {
