@@ -1,0 +1,6 @@
+framework module Pods_QRcode_L1UITests {
+  umbrella header "Pods-QRcode_L1UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

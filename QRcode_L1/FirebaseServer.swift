@@ -9,6 +9,12 @@
 import Foundation
 import Firebase
 
+struct Response {
+    var returnCode: String
+    var message: String
+    var data: [String: String]?
+}
+
 class FirebaseServer {
     static let shared = FirebaseServer()
     let rootRef = Database.database().reference()
@@ -21,7 +27,7 @@ class FirebaseServer {
         rootRef.database.reference(fromURL: firebaseProjectURL)
     }
     
-    func regist(withAccount account: String, password: String) { //[todo] escaping
+    func regist(withAccount account: String, password: String, completion: @escaping (_ response: Response) -> Void) { //[todo] escaping
         print(isRun)
         if !isRun {
             isRun = true
@@ -32,6 +38,8 @@ class FirebaseServer {
                     for data in downloadData {
                         let accountInfoDic = data.value as! [String: String]
                         if accountInfoDic["account"] == account {
+                            let response = Response(returnCode: "0", message: "帳號已存在", data: nil)
+                            completion(response)
                             print("account exist")
                             self.isRun = false
                             isExist = true
@@ -51,15 +59,19 @@ class FirebaseServer {
                                        "isVerified": "false"
                     ]
                     self.accountRef.setValue(updataValue)
+                    let response = Response(returnCode: "1", message: "註冊成功", data: nil)
+                    completion(response)
                 }
                 self.isRun = false
             }
         }
-        
     }
-    
-    func login(withAccount account: String, password: String) { //[todo] escaping
+
+    func login(withAccount account: String, password: String, completion: @escaping (_ response: Response) -> Void) { //[todo] escaping
         print(isRun)
+        var accountExist = false
+        var passwordValid = false
+        var accountValid = false
         if !isRun {
             isRun = true
             let dataQuery = rootRef.queryLimited(toLast: 500)
@@ -68,18 +80,43 @@ class FirebaseServer {
                     for data in downloadData {
                         let accountInfoDic = data.value as! [String: String]
                         if accountInfoDic["account"] == account {
-                            if accountInfoDic["isVerified"] == "true" {
-                                print("account is valid, login now...")
-                            } else {
-                                print("account is not valid")
+                            accountExist = true
+                            if accountInfoDic["password"] == password {
+                                passwordValid = true
+                                if accountInfoDic["isVerified"] == "true" {
+                                    accountValid = true
+                                    let returnData = ["account": accountInfoDic["account"]!,
+                                                      "registTime": accountInfoDic["time"]!,
+                                                      "registModel": accountInfoDic["deviceModel"]!,
+                                                      "currentLoginModel": Utility.shared.getDeviceModelName(),
+                                                      "DeviceUDID": accountInfoDic["DeviceUDID"]!,
+                                                      "isVerified": accountInfoDic["isVerified"]!,
+                                                      "job": accountInfoDic["job"]!,
+                                                      "autobiography": accountInfoDic["autobiography"]!
+                                    ]
+                                    let response = Response(returnCode: "1", message: "account is valid, login now...", data: returnData)
+                                    completion(response)
+                                }
                             }
                             self.isRun = false
-                            return
                         }
                     }
-                    print("account not exist")
+                    if accountExist == true {
+                        if passwordValid == true {
+                            if accountValid == true {
+                            } else {
+                                let response = Response(returnCode: "0", message: "帳號審核中", data: nil)
+                                completion(response)
+                            }
+                        } else {
+                            let response = Response(returnCode: "-2", message: "密碼錯誤", data: nil)
+                            completion(response)
+                        }
+                    } else {
+                        let response = Response(returnCode: "-1", message: "無此帳號", data: nil)
+                        completion(response)
+                    }
                 }
-                
                 self.isRun = false
             }
         }

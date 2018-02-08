@@ -26,13 +26,21 @@ class LoginViewController: UIViewController {
     func sendLoginInfoToServer(withAccount account: String, andPassword password: String) {
         //send to server
         
-        FirebaseServer.shared.login(withAccount: account, password: password)
-        
+        //FirebaseServer.shared.regist(withAccount: account, password: password)
+        FirebaseServer.shared.login(withAccount: account, password: password) { (response) in
+            print(response.message)
+            print(response.returnCode)
+            print(response.data)
+        }
     }
     
     func sendRegistInfoToServer(withAccount account: String, andPassword password: String) {
         print("account: \(account), password: \(password)")
-        FirebaseServer.shared.regist(withAccount: account, password: password)
+        //FirebaseServer.shared.regist(withAccount: account, password: password)
+        FirebaseServer.shared.regist(withAccount: account, password: password) { (response) in
+            print("message: " + response.message)
+            print("returncode: " + response.returnCode)
+        }
     }
     
     override func viewDidLoad() {
