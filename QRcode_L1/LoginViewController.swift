@@ -11,6 +11,8 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
+    var userData: [String: String] = [:]
+    
     @IBOutlet weak var accountTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,12 +29,18 @@ class LoginViewController: UIViewController {
     
     func sendLoginInfoToServer(withAccount account: String, andPassword password: String) {
         FirebaseServer.shared.login(withAccount: account, password: password) { (response) in
-            print(response.returnCode)
-            print(response.message)
-            print(response.data)
+            if let data = response.data {
+                self.userData = data
+            }
+            if response.returnCode == "1" {
+                //segue
+                self.performSegue(withIdentifier: "segueToAccountInfoVC", sender: nil)
+            }
+            
         }
         
     }
+    
     
     func sendRegistInfoToServer(withAccount account: String, andPassword password: String) {
         FirebaseServer.shared.regist(withAccount: account, password: password) { (response) in
@@ -42,6 +50,14 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let accountInfoVC = segue.destination as? AccountInfoViewController {
+            accountInfoVC.userData = self.userData
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

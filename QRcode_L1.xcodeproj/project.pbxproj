@@ -12,6 +12,7 @@
 		D0B5C63229A41262CF8DCECD /* Pods_QRcode_L1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C156F86643511ADC4A4F53E /* Pods_QRcode_L1.framework */; };
 		DA1910F0202208C100D05231 /* IdentifierCardMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1910EF202208C100D05231 /* IdentifierCardMaker.swift */; };
 		DA1910F22022093400D05231 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1910F12022093400D05231 /* Employee.swift */; };
+		DA4DFCAB202CBF0B00FD2AB6 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DFCAA202CBF0B00FD2AB6 /* AccountInfoViewController.swift */; };
 		DA54EB8920233036003A44C2 /* VCLLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54EB8820233036003A44C2 /* VCLLoggingViewController.swift */; };
 		DA801D962026F9C400C2183B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA801D952026F9C400C2183B /* LoginViewController.swift */; };
 		DAAE36C02027535300407037 /* FirebaseServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE36BF2027535300407037 /* FirebaseServer.swift */; };
@@ -55,6 +56,7 @@
 		D3B94864BFF748A510DBBC3A /* Pods-QRcode_L1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRcode_L1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRcode_L1Tests/Pods-QRcode_L1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA1910EF202208C100D05231 /* IdentifierCardMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierCardMaker.swift; sourceTree = "<group>"; };
 		DA1910F12022093400D05231 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		DA4DFCAA202CBF0B00FD2AB6 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
 		DA54EB8820233036003A44C2 /* VCLLoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLLoggingViewController.swift; sourceTree = SOURCE_ROOT; };
 		DA801D952026F9C400C2183B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DAAE36BF2027535300407037 /* FirebaseServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServer.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				DAAE36BF2027535300407037 /* FirebaseServer.swift */,
 				DAAE36C12027548A00407037 /* Utility.swift */,
 				DACAB125201A04400089E326 /* Main.storyboard */,
+				DA4DFCAA202CBF0B00FD2AB6 /* AccountInfoViewController.swift */,
 				DA1910EF202208C100D05231 /* IdentifierCardMaker.swift */,
 				DA1910F12022093400D05231 /* Employee.swift */,
 				DACAB12B201A04400089E326 /* Assets.xcassets */,
@@ -496,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4DFCAB202CBF0B00FD2AB6 /* AccountInfoViewController.swift in Sources */,
 				DA801D962026F9C400C2183B /* LoginViewController.swift in Sources */,
 				DA54EB8920233036003A44C2 /* VCLLoggingViewController.swift in Sources */,
 				DAAE36C22027548A00407037 /* Utility.swift in Sources */,
