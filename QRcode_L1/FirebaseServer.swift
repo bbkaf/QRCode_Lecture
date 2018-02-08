@@ -23,12 +23,10 @@ class FirebaseServer {
     private let concurrentQueue = DispatchQueue(label: "com.lecture.qrcode")
     var isRun = false
     init() {
-        print("init")
         rootRef.database.reference(fromURL: firebaseProjectURL)
     }
     
-    func regist(withAccount account: String, password: String, completion: @escaping (_ response: Response) -> Void) { //[todo] escaping
-        print(isRun)
+    func regist(withAccount account: String, password: String, completion: @escaping (_ response: Response) -> Void) {
         if !isRun {
             isRun = true
             let dataQuery = rootRef.queryLimited(toLast: 500)
@@ -40,7 +38,6 @@ class FirebaseServer {
                         if accountInfoDic["account"] == account {
                             let response = Response(returnCode: "0", message: "帳號已存在", data: nil)
                             completion(response)
-                            print("account exist")
                             self.isRun = false
                             isExist = true
                             return
@@ -49,7 +46,6 @@ class FirebaseServer {
                 }
                 
                 if !isExist {
-                    print("add account")
                     self.accountRef = self.rootRef.childByAutoId()
                     let updataValue = ["account": account,
                                        "password": password,
@@ -66,9 +62,8 @@ class FirebaseServer {
             }
         }
     }
-
-    func login(withAccount account: String, password: String, completion: @escaping (_ response: Response) -> Void) { //[todo] escaping
-        print(isRun)
+    
+    func login(withAccount account: String, password: String, completion: @escaping (_ response: Response) -> Void) {
         var accountExist = false
         var passwordValid = false
         var accountValid = false
