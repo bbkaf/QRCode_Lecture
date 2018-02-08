@@ -52,7 +52,9 @@ class FirebaseServer {
                                        "time": Utility.shared.stringFromDate(Date()),
                                        "deviceModel": Utility.shared.getDeviceModelName(),
                                        "DeviceUDID": UIDevice.current.identifierForVendor?.uuidString,
-                                       "isVerified": "false"
+                                       "isVerified": "false",
+                                       "job": "none",
+                                       "autobiography": "none"
                     ]
                     self.accountRef.setValue(updataValue)
                     let response = Response(returnCode: "1", message: "註冊成功", data: nil)
