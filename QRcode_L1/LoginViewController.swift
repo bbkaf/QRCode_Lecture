@@ -33,6 +33,9 @@ class LoginViewController: UIViewController {
                 self.userData = data
             }
             if response.returnCode == "1" {
+                //storeUserPassword
+                //UserDefaults.standard.set(account, forKey: "account")
+                //UserDefaults.standard.set(password, forKey: "password")
                 //segue
                 self.performSegue(withIdentifier: "segueToAccountInfoVC", sender: nil)
             }
@@ -61,6 +64,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.accountTextField.text = UserDefaults.standard.object(forKey: "account") as? String ?? ""
+        //self.passwordTextField.text = UserDefaults.standard.object(forKey: "password") as? String ?? ""
         Auth.auth().signInAnonymously { (user, error) in
             if error != nil {
                 print("error happen in \(String(describing: user)), \(String(describing: error))")

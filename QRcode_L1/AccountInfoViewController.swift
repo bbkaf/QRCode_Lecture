@@ -10,13 +10,17 @@ import UIKit
 
 class AccountInfoViewController: UIViewController {
 
+    @IBOutlet weak var myQRCodeImageView: QRCodeImageView!
     var userData: [String: String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("AccountInfoVC viewDidLoad")
         print(userData)
+        
+        myQRCodeImageView.genQRCode(infoTest: userData["mobilePassword"] ?? "error")
 
+        
     }
 
 

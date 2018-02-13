@@ -10,6 +10,7 @@
 		77F6D49EAE3A71BE4491CF3D /* Pods_QRcode_L1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA1A32FEBA0A4DB771024F0 /* Pods_QRcode_L1Tests.framework */; };
 		835CBBAF8DA4C5BB5D506D4A /* Pods_QRcode_L1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4704BF6C10BBCA373D5DAD /* Pods_QRcode_L1UITests.framework */; };
 		D0B5C63229A41262CF8DCECD /* Pods_QRcode_L1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C156F86643511ADC4A4F53E /* Pods_QRcode_L1.framework */; };
+		DA173F182032EEB100BA14A3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA173F172032EEB100BA14A3 /* File.swift */; };
 		DA1910F0202208C100D05231 /* IdentifierCardMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1910EF202208C100D05231 /* IdentifierCardMaker.swift */; };
 		DA1910F22022093400D05231 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1910F12022093400D05231 /* Employee.swift */; };
 		DA4DFCAB202CBF0B00FD2AB6 /* AccountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4DFCAA202CBF0B00FD2AB6 /* AccountInfoViewController.swift */; };
@@ -54,6 +55,7 @@
 		A590C3C575010D77E22CB10B /* Pods-QRcode_L1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRcode_L1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRcode_L1/Pods-QRcode_L1.debug.xcconfig"; sourceTree = "<group>"; };
 		CB4704BF6C10BBCA373D5DAD /* Pods_QRcode_L1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRcode_L1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B94864BFF748A510DBBC3A /* Pods-QRcode_L1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRcode_L1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRcode_L1Tests/Pods-QRcode_L1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA173F172032EEB100BA14A3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		DA1910EF202208C100D05231 /* IdentifierCardMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierCardMaker.swift; sourceTree = "<group>"; };
 		DA1910F12022093400D05231 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		DA4DFCAA202CBF0B00FD2AB6 /* AccountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				DACAB123201A04400089E326 /* ViewController.swift */,
 				DA801D952026F9C400C2183B /* LoginViewController.swift */,
 				DAAE36BF2027535300407037 /* FirebaseServer.swift */,
+				DA173F172032EEB100BA14A3 /* File.swift */,
 				DAAE36C12027548A00407037 /* Utility.swift */,
 				DACAB125201A04400089E326 /* Main.storyboard */,
 				DA4DFCAA202CBF0B00FD2AB6 /* AccountInfoViewController.swift */,
@@ -508,6 +511,7 @@
 				DACAB124201A04400089E326 /* ViewController.swift in Sources */,
 				DA1910F22022093400D05231 /* Employee.swift in Sources */,
 				DACAB122201A04400089E326 /* AppDelegate.swift in Sources */,
+				DA173F182032EEB100BA14A3 /* File.swift in Sources */,
 				DAAE36C02027535300407037 /* FirebaseServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

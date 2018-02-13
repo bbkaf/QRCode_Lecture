@@ -91,7 +91,7 @@ class FirebaseServer {
                                                       "job": accountInfoDic["job"]!,
                                                       "autobiography": accountInfoDic["autobiography"]!
                                     ]
-                                    let response = Response(returnCode: "1", message: "account is valid, login now...", data: returnData)
+                                    let response = Response(returnCode: "1", message: "account is valid, login now...", data: accountInfoDic)
                                     completion(response)
                                 }
                             }
